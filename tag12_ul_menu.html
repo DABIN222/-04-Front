@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+	ul, li, body{
+		margin:0; padding:0px;
+	}
+	/* '' : #menu의 후손 li
+		> : #menu의 자손 li
+	*/
+	#menu{
+		background-color:yellow;
+		overflow:auto;				/*컨텐츠만큼 공간을 확보한다.*/
+		list-style-type:none;
+	}
+	#menu>li{
+		background-color:pink;
+		float:left;
+		
+		width:25%;
+		height:50px;
+		
+		text-align:center;			/*left, center, right*/
+		line-height:50px;
+		font-size:1.2em;				/*(기본 16)px:픽셀, pt:포인트, %:퍼센트, mm:밀리미터, cm:센치, in:인치, em..*/
+										/*em은 : 만약 현재페이지의 기본 픽셀이20px이면 20px 가 1em임 1.2면 120%이다. */
+		/*fonts.google.com에 있는 글꼴을 사용해보자*/
+		font-family: 'Jua', 궁서체, 돋움체, 굴림체;	/*궁서체가 없으면 돋움체로해라*/
+	}	
+	/* 
+	가상클래스
+	link:링크	,hover:마우스 오버		,visited:방문했을 때	,active:누른 상태일 때
+	
+	text-decoration-> underline:밑줄,		overline:윗줄,		line-through:취소선,		none:선없음
+	*/
+	
+	#menu a:link, #menu a:visited{
+		text-decoration:none; color:gray;
+	}
+	
+	#menu a:hover{
+		text-decoration:underline; color:red; font-weight:bold;
+	}
+	
+</style>
+</head>
+
+<body>
+<ul id="menu">
+	<li style="background:yellow"><a href="#">TV</a></li>
+	<li><a href="#">여행/맛집</a></li>
+	<li><a href="#">푸드</a></li>
+	<li><a href="#">만화/웹툰</a></li>
+</ul>
+<style>
+	img{border:5px solid red;}
+</style>
+<img src="../img/3.JPG"/>
+
+</body>
+</html>
