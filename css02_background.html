@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	/*
+		background-color:배경색
+		background-image:배경이미지
+		background-repeat:
+			기본 : repeat 
+			한 번 : no-repeat
+			X축만 : repeat-x
+			Y축만 : repeat-y -> 반복방향, 반복여부를 설정
+			
+		background-position:배경이미의 위치
+			(left, right, top, bottom, center,백분율)
+		background-attachment: fixed(고정), scroll(기본) 스크롤
+		background-size:배경이미지의 크기를 지정(백분율, px)
+	*/
+	body{
+		
+			/*background-image:url(../img/1.JPG);
+			background-repeat:no-repeat;*/
+				/*background-repeat:repeat-y;*/
+				/*background-repeat:repeat-x;*/
+				/*background-position:center bottom;*/
+			/*background-attachment:fixed;*/
+		
+		
+		
+		/*스타일시트 속성그룹화*/
+		/*background:#ddd url(../img/1.JPG) no-repeat fixed;*/
+		background:no-repeat fixed url(../img/2.JPG) #ddd;
+		
+		background-size:300px,300px;
+		background-position:50% 30%;
+	}
+
+</style>
+</head>
+<body>
+<h1>background 속성</h1>
+
+<pre>
+
+</pre>
+
+<img src="../img/2.JPG"/><br/>
+<img src="../img/3.JPG"/>
+
+</body>
+</html>
