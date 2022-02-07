@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	/*margin-[top, right, bottom, left] 을 그룹화한 것이다.*/
+	/*padding-[top, right, bottom, left] 를 그룹화한 것이다.*/
+	body{
+		margin:0px;		/*왼쪽으로 딱 붙음*/
+	}
+	#t1{background-color:lightblue; margin:0px; padding:20px;}
+	#t2{background-color:yellow; margin:10px 50px 100px 30px; padding:10px;}
+	img{
+		width:300px;
+		border-style:solid;
+		border-width:5px;
+		border-color:red;
+		margin:50px;
+	};
+</style>
+
+</head>
+<body>
+
+<h1 id="t1">마진 : 객체 바깥쪽 여백</h1>
+<div id="t2">
+	패딩(Padding) : 객체 안쪽 여백<br/>
+	div태그는 margin, padding이 0px이다.
+</div>
+<div id="t3" style="background:#ddd;">
+	패딩(Padding) : 객체 안쪽 여백
+</div>
+<img src ="../img/1.JPG" align="right"/>현대자동차는 3일(목) 적재 능력을 강화한 '캐스퍼밴' 모델을 출시했다.
+</body>
+</html>

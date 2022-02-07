@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	/* 구조선택자
+		2n : 짝수 번째 객체를 선택	/	2n+1 : 홀수 번째 개체		/ 3n : 3의 배수번째 객체
+		: nth-child()
+	*/
+	#lst>li:nth-child(2n){
+		background:pink;
+	}
+	#lst>li:nth-child(3n){
+		background:green;
+	}
+	#lst>li:first-child{
+		color:orange;
+	}
+	#lst>li:last-child{
+		color:blue; font-size:1.2em;
+	}
+	
+	/*그림자 설정*/
+	#lst>li{
+		font-size:1.2em; margin-bottom:30px; border:1px solid #ddd;
+	}
+	
+	/*박스 또는 글자에 그림자 표시*/
+	#lst>li{
+		/*		오른쪽으로		아래쪽으로		투명정도		그림자색상*/
+		box-shadow:-10px 	-5px 		5px 		gray;
+		/*방향을 바꾸고 싶다면 음수를 사용하면 된다.*/
+	}
+	#lst>li{
+		text-shadow:5px 5px 5px green;
+	}
+	
+</style>
+</head>
+<!-- 
+	html 속성
+	oncontextmenu : 마우스 오른쪽키 사용제어 , 마우스 복사 막기(그러나 ctrl+c하면 복사됌)
+	
+	onselectstart : 선택시작 불가능
+	
+	ondragstart : 드래그 시작 불가능
+ -->
+<body oncontextmenu="return false" onselectstart="return false" 
+	  ondragstart="return false" ondragend="return false">
+
+<ul id="lst">
+	<li>맨드라미</li>
+	<li>장미</li>
+	<li>코스모스</li>
+	<li>민들레</li>
+	<li>해바라기</li>
+	<li>히야신스</li>
+	<li>민들레2</li>
+	<li>해바라기2</li>
+	<li>히야신스2</li>
+</ul>
+
+<style>
+	/* 구조선택자
+		first-of-type	: 처음 객체
+		last-of-type	: 마지막 객체	
+		nth-of-type(2n)	: 2n짝수 번째, 2n+1홀수 번째
+	*/
+	#lst2>li:nth-of-type(2n){background:yellow;}
+	#lst2>li:nth-of-type(2n+1){background:lightgray;}
+	#lst2>li:first-of-type{font-size:2em;}
+	#lst2>li:last-of-type{color:green;}
+</style>
+<ul id="lst2">
+	<li>맨드라미</li>
+	<li>장미</li>
+	<li>코스모스</li>
+	<li>민들레</li>
+	<li>해바라기</li>
+	<li>히야신스</li>
+	<li>민들레2</li>
+	<li>해바라기2</li>
+	<li>히야신스2</li>
+</ul>
+
+<style>
+	/* 텍스트 스타일
+		::first-letter	: 문단의 첫번째 문자에 적용하는 스타일
+		::first-line	: 첫 번째 줄에 적용하는 스타일
+		::selection		: 선택한 문자의 스타일, 드래그
+	*/
+	#txt::first-letter{font-size:2em; background:pink; font-weight:bold; color:red;}
+	#txt::first-line{text-decoration:underline;}
+	#txt::selection{color:red; background:#000;}	
+	
+	#txt{
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e22ddf+0,207cca+78,2989d8+100,7db9e8+100 */
+            background: #e22ddf; /* Old browsers */
+            background: -moz-linear-gradient(top,  #e22ddf 0%, #207cca 78%, #2989d8 100%, #7db9e8 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #e22ddf 0%,#207cca 78%,#2989d8 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #e22ddf 0%,#207cca 78%,#2989d8 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e22ddf', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	}
+</style>
+
+<div id="txt">
+쌍용자동차가 사전계약에 대박을 터트리며 흥행을 예고한 국내 최초 준중형 전기 SUV'코란도 이모션'을 오는 4일 출시하고 본 계약을 실시한다고 3일날 밝혔다.
+</div>
+</body>
+</html>

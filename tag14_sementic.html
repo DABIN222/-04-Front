@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	/*초기화*/
+	body, ul, li{
+		margin:0; padding:0; list-style-type:none;
+	}
+	
+	/*HEADER*/
+	header{
+		height:50px; background:pink;
+	}
+	header>nav>ul>li{
+		float:left; height:50px; width:50%;
+	}
+	
+	/*컨텐트*/
+	body>section{width:1200px; margin:0 auto; overflow:auto;}
+	body>section>*{		/*바디의 자손 젤 위에있는 섹션이 될 것임*/
+		float:left;
+	}
+	aside{
+		width:200px;
+		background-color:gray;
+	}
+	.content{width:1000px;}
+	
+	/*푸터*/
+	footer{hegiht:30px; background:green;}
+	
+	
+</style>
+<!-- sementic 태그
+	header	: 페이지 상단
+	nav		: 링크 걸린 곳
+	section	: 컨텐츠 본문
+	article : 글이  많은 내용
+	aside	: 사이드 메뉴
+	footer	: 페이지 하단
+
+ -->
+</head>
+<body>
+<header>
+	<nav>
+		<ul>
+			<li><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a></li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<aside>
+		<nav>
+			<ul>
+				<li><a href="#">aa</a></li>
+				<li>bb</li>
+				<li>cc</li>
+			</ul>
+		</nav>
+	</aside>
+	<section class="content">
+		<h1>시멘틱태그</h1>
+		<article>글이 많은 내용</article>
+		<img src="../img/jejumap.png"/>
+	</section>
+</section>
+<footer>
+	<!-- 페이이 하단 -->
+	<nav>고객센터</nav>
+</footer>
+</body>
+</html>
