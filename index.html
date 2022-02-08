@@ -1,75 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>제목</title>
+    <meta charset="UTF-8">
+    <title>탭메뉴 만들기</title>
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        #tabMenu{
+            width: 600px;
+            height: 600px;
+            border: 1px solid gray;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 메뉴 */
+        #menu>li{
+            float: left;
+            padding-right: 35px;
+        }
+
+        /* 라디오 버튼 숨기기 */
+        #tabMenu>input{
+            /*display : 없어지면서 공간을 반납*/
+            display: none;
+        }
+
+        /*컨텐츠 겹치게 하기*/
+        #tabMenu>div{
+            position: absolute;
+            left: 0;
+            top: 30px;
+            display: none;
+        }
+
+        /*메뉴 바꾸기 구현 : radio버튼이 클릭되면 해당 컨텐츠 보여주기*/
+        #m1:checked~div:nth-of-type(1){
+            display: block;
+        }
+		#m2:checked~div:nth-of-type(2){
+            display: block;
+        }
+
+        #m3:checked~div:nth-of-type(3){
+            display: block;
+        }
+
+        #m4:checked~div:nth-of-type(4){
+            display: block;
+        }
+
+        #m5:checked~div:nth-of-type(5){
+            display: block;
+        }
+
+        #m6:checked~div:nth-of-type(6){
+            display: block;
+        }
+
+        #m7:checked~div:nth-of-type(7){
+            display: block;
+        }
+
+        #m8:checked~div:nth-of-type(8){
+            display: block;
+        }
+		
+
+    </style>
 </head>
 <body>
-	<h2>메뉴</h2>
-	<hr/>
-	<h2>HTML</h2>
-	<ol>
-       <h3>Movie</h3>
-	   <li><a href="./audio_movie/1.mp3">1.mp3</a><br/></li>
-	   <li><a href="./audio_movie/2.mp3">2.mp3</a><br/></li>
-	   <li><a href="./audio_movie/3.mp3">3.mp3</a><br/></li>
-	   <li><a href="./audio_movie/dan.mp4">dan.mp4</a><br/></li>
-	   <li><a href="./audio_movie/se.mp4">se.mp4</a><br/></li>
-	   <li>-------------------------------------------<br/></li>
-	   <h3>HTML</h3>
-	   <li><a href="./html5_css5/tag01_a.html">tag01_a</a><br/></li>
-	   <li><a href="./html5_css5/tag01_a_map.html">tag01_a_map</a><br/></li>
-	   <li><a href="./html5_css5/tag02_img.html">tag02_img</a><br/></li>
-	   <li><a href="./html5_css5/tag03_ul_ol.html">tag03_ul_ol</a></li>
-	   <li><a href="./html5_css5/tag04_table.html">tag04_table</a></li>
-	   <li><a href="./html5_css5/tag05_table2.html">tag05_table2</a></li>
-	   <li><a href="./html5_css5/tag06_iframe.html">tag06_iframe</a></li>
-	   <li><a href="./html5_css5/tag07_audio.html">tag07_audio</a></li>
-	   <li><a href="./html5_css5/tag08_video.html">tag08_video</a><br/></li>
-	   <li><a href="./html5_css5/tag09_form.html">tag09_form</a><br/></li>
-	   <li><a href="./html5_css5/tag10_div.html">tag10_div</a><br/></li>
-	   <li><a href="./html5_css5/tag11_div2.html">tag11_div2</a><br/></li>
-	   <li><a href="./html5_css5/tag12_ul_menu.html">tag12_ul_menu</a><br/></li>
-	   <li><a href="./html5_css5/tag13_div_layout.html">tag13_div_layout</a><br/></li>
-	   <li><a href="./html5_css5/tag14_sementic.html">tag14_sementic</a><br/></li>
-	   <li><a href="./html5_css5/tag15_meta.html">tag15_meta</a><br/></li>
-	</ol>
-	<hr/>
-	<h2>CSS</h2>
-	<ol>
-	   <li><a href="./html5_css5/css01_external.html">css01_external</a><br/></li>
-	   <li><a href="./html5_css5/css02_background.html">css02_background</a><br/></li>
-	   <li><a href="./html5_css5/css03_border.html">css03_border</a><br/></li>
-	   <li><a href="./html5_css5/css04_margin_padding.html">css04_margin_padding</a><br/></li>
-	   <li><a href="./html5_css5/css05_select.html">css05_select</a><br/></li>
-	   <li><a href="./html5_css5/css06_select.html">css06_select2</a><br/></li>
-	   <li><a href="./html5_css5/css07_select.html">css07_select3</a><br/></li>
-	   <li><a href="./html5_css5/css08_duration.html">css08_duration</a><br/></li>
-	   <li><a href="./html5_css5/css09_visibility_display.html">css09_visibility_display</a><br/></li>
-	   <li><a href="./html5_css5/css10_media.html">css10_media</a><br/></li>
-	</ol>
-	
-	<h2>Style.css</h2>
-	<ol>
-		<li><a href="./html5_css5/style.css">style.css</a><br/></li>
-		<li><a href="./html5_css5/style2.css">style2.css</a><br/></li>
-	</ol>
-	<hr/>
-	
+<div id="tabMenu">
+    <!-- 메뉴 -->
+    <ul id="menu">
+        <li><label for="m1">블로그</label></li>
+        <li><label for="m2">카페</label></li>
+        <li><label for="m3">지식공간</label></li>
+        <li><label for="m4">영화</label></li>
+        <li><label for="m5">뮤직</label></li>
+        <li><label for="m6">웹툰</label></li>
+        <li><label for="m7">브런치</label></li>
+        <li><label for="m8">게임</label></li>
+    </ul>
 
+    <!-- 버튼 -->
+    <input type="radio" name="menu" id="m1"/>
+    <input type="radio" name="menu" id="m2"/>
+    <input type="radio" name="menu" id="m3"/>
+    <input type="radio" name="menu" id="m4"/>
+    <input type="radio" name="menu" id="m5"/>
+    <input type="radio" name="menu" id="m6"/>
+    <input type="radio" name="menu" id="m7"/>
+    <input type="radio" name="menu" id="m8"/>
 
+    <!-- 컨텐츠 -->
+    <div><img src="tab1.png"/> </div>
+    <div><img src="tab2.png"/> </div>
+    <div><img src="tab9.png"/> </div>
+    <div><img src="tab4.png"/> </div>
+    <div><img src="tab5.png"/> </div>
+    <div><img src="tab6.png"/> </div>
+    <div><img src="tab7.png"/> </div>
+    <div><img src="tab8.png"/> </div>
+</div>
 
-
-	<h1>컨텐츠(Heading, h1, h2, h3, h4, h5, h6)</h1>
-	<h2>강조(진하게, b태그, strong태그), 제목, 여백확보, 한줄</h2>
-	<h6>heading</h6>
-	기본문자	<br/>	크기(16px)
-	
-	
-	<i>줄바꿈</i>은 <b>자동</b>으로 		되지 않는다. 
-	
-	
-	br태그로 줄을 		바꿈 <br/>	
-	space는 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1글자만 적용된다.
 </body>
 </html>

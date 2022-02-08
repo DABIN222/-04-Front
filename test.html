@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	ul, li{margin:0; padding:0; list-style-type:none;}		
+	#log{width:400px; margin:0px auto;}
+	#log>h1{text-align:center;}
+	
+	#logFrm>ul>li{
+		float:bottom;
+		width:30%;
+	}
+	#logFrm>ul>li:nth-child(2n){width:70%}
+	#logFrm>ul>li:last-of-type{width:100%; text-align:center; margin-top:30px;}
+</style>
+
+<script>
+	function logFormCheck(){
+		//	아이디와 비밀번호 입력유무를 확인하고 모두입력되면 action의 파일을 요청하고
+		//	하나라도 입력안되면 현재 페이지에 머물러야 한다.
+		//	아이디가 있는지 확인
+		var email = document.getElementById("usermail");
+		var id = document.getElementById("userid");
+		if(email.value || id.value ==""){
+			alert("회원 정보가 일치하지 않습니다.");
+			id.focus();
+			return false;
+		}
+		//	아이디와 비밀번호가 다 입력되었을 때
+		//	submit발생시키기 (자바크스립트로)
+		document.getElementById("logFrm").submit();
+
+		
+	}
+</script>
+
+</head>
+
+
+<body>
+
+<div id="log">
+	<hr/>
+	<form method="post" action="login.jsp" id="logFrm">
+		<ul>
+			<li>이메일</li>
+			<li><input type="text" name="usermail" id="usermail"/></li>
+			<hr/>
+			<li>아이디</li>
+			<li><input type="text" name="userid" id="userid"/></li>
+			<li>도메인</li>
+			<li><input type="text" name="domain" id="domain"/></li>
+			<li><input type="button" value="로그인" onclick="logFormCheck()"/>
+				<input type="reset" value="취   소"/></li>
+		</ul>
+	</form>
+</div>
+
+</body>
+</html>
