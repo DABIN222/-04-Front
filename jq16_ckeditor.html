@@ -5,6 +5,9 @@
 <title>Insert title here</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="//cdn.ckeditor.com/4.17.2/full/ckeditor.js"></script>
+<style>
+	#cke_content{height:800px;}
+</style>
 <script>
 	//	ckeditor 이밑에 바로하면 에러남 , jquery로 하거나 함수로 만들어서 써야한다.
 	$(function(){
@@ -45,7 +48,7 @@
 <form method="post" action="aaaa.jsp" id="frm">
 	<h1>글등록</h1>
 	<div>이름 : <input type="text" name="username" id="username"/></div>
-	<div>
+	<div> 
 		글 내용
 		<textarea name="content" id="content"></textarea>
 	</div>

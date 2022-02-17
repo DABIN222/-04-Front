@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<meta name="viewport" content="width=device-width, initial-sale=1"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+	<h1>Accodion예</h1>
+	<div id="accordion">
+		<div class="card">
+			<div class="card-header" data-target="#v1" data-toggle="collapse">기본으로 보이는 내용 : 슐팅</div>
+			<div id="v1" class="collapse" data-parent="#accordion">토글로 보이는 내용 : 슐팅은 경기 후 올림픽뉴스 서비스를 통해 "속도가 계속 붙고 있다고 느꼈다. 바로 그때 중국 선수의 팔에 밀렸고 나는 더 이상 아무 것도 할 수 없었다"며 아쉬워했다.</div>
+		</div>
+		<div class="card">
+			<div class="card-header" data-target="#v2" data-toggle="collapse">이날의 경기</div>
+			<div id="v2" class="collapse" data-parent="#accordion">토글로 보이는 내용 : 이날 경기 이후 시청자들 사이에서는 슐팅이 결승선 통과 직전 최민정의 손목과 어깨를 밀치는 '나쁜 손' 반칙을 범했다는 지적이 나왔다.</div>
+		</div>
+		<div class="card">
+			<div class="card-header" data-target="#v3" data-toggle="collapse">해당 장면 본 누리꾼</div>
+			<div id="v3" class="collapse" data-parent="#accordion"><img src="../img/5.jpg"/></div>
+		</div>
+	</div>
+	
+	<h1>Collapse예</h1>
+	<input type="button" value="클릭하세요" class="btn btn-secondary"
+			data-target="#view" data-toggle="collapse"/>
+	<div id="view" class="collapse show">
+		<img src="../img/4.jpg"/>
+	</div>
+	
+	<hr/>
+	<input type="button" value="클릭하세요" class="btn btn-secondary"
+			data-target="#view1" data-toggle="collapse"/>
+	<div id="view1" class="collapse show">
+		2022 베이징 동계 올림픽 여자 쇼트트랙 1000m 종목 금메달리스트 수잔 슐팅(네덜란드)이 여자 1500m 결승에서 중국 선수 팔에 밀려났다며 속상함을 드러냈다. 슐팅은 1000m 경기 당시, 결승선 통과 직전 최민정을 방해하는 장면으로 논란이 된 선수다.
+	</div>
+</div>
+
+</body>
+</html>
