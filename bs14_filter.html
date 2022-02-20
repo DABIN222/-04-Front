@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<meta name="viewport" content="width=device-width, initial-sale=1"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<script>
+	$(function(){
+		//	search가 keyup 이벤트가 발생하면 테이블에서 검색어 있는 줄만 보여주고 나머지는 숨기는 작업
+		$("#search").keyup(function(){
+			//			$("search")
+			var value = $(this).val().toLowerCase();
+			
+			//	아이디 searchList내의 값을 filter필터링
+			$("#searchList>tr").filter(function(){
+				//	value가 tr에 있는지 확인
+				var idx = $(this).text().toLowerCase().indexOf(value); // 없으면 1, 있으면 index 번호
+				//			true:그냥 줌, false:숨김
+				$(this).toggle(idx>-1);
+			});
+		});
+	});
+</script>
+<style>
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+	<h1>Filter</h1>
+	<input type="text" id="search" placeholder="Search..." class="form-control"/><!-- form-control : search칸넓어짐 -->
+	<hr/>
+	
+	<table class="table table-striped"><!-- table table-striped : 넓어지고 1줄씩 색칠-->
+		<thead>
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+			<th>연락처</th>
+			<th>이메일</th>
+		</tr>
+		</thead>	
+		
+		<tbody id="searchList">
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>010-9999-9999</td>
+			<td>hong@naver.com</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>칼바람</td>
+			<td>010-0000-0000</td>
+			<td>cal@nate.com</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>이문세</td>
+			<td>010-1111-1111</td>
+			<td>mooon2@naver.com</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>고길동</td>
+			<td>010-2222-2222</td>
+			<td>GOGOGO@daum.net</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>베이가</td>
+			<td>010-3333-3333</td>
+			<td>ega12@daum.net</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>이즈리얼</td>
+			<td>010-4444-4444</td>
+			<td>IsReal@google.com</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>김연아</td>
+			<td>010-5555-5555</td>
+			<td>yakim@nate.com</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>강사님</td>
+			<td>010-6666-6666</td>
+			<td>goguma7@google.com</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>길리슛</td>
+			<td>010-7777-7777</td>
+			<td>asdf00@nate.com</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>김김김</td>
+			<td>010-8888-8888</td>
+			<td>kim333@naver.com</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+
+</body>
+</html>
